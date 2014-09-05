@@ -1,0 +1,31 @@
+<div class="container">
+  <div class="page-header">
+    <h1>Twitter Search</h1>
+  </div>
+
+  <form class="form-inline" role="form">
+  <div class="col-8 col-sm-8 col-lg-8">
+    <div class="row panel">
+      <div class="input-group">
+        <span class="input-group-addon">Term:</span>
+        <input type="text" name="term" class="form-control" placeholder="enter search term here!">
+        <span class="input-group-btn">
+          <button class="btn btn-default" type="sybmit">Go!</button>
+        </span>
+      </div>
+    </div>
+    </form>
+    <% @tweets.each do |t| %>
+    <div class="row panel panel-info">
+      <div class="panel-heading">
+        <strong><%= t.user.name %></strong>
+         in <span class="label label-default"><%= t.place.name %></span>
+         <span class="label label-success"><%= distance_of_time_in_words_or_absolute(t.created_at) %></span>
+      </div>
+      <div class="panel-body">
+        <%= "#{t.text}"%>
+      </div>
+    </div>
+    <% end %>
+  </div>
+</div>
