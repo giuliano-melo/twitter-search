@@ -15,7 +15,7 @@
       </div>
     </div>
     </form>
-    <div class="row page-header">Found <%= @tweets.length %> tweets with "<%= params['term'] %>"</div>
+    <div class="row page-header">Found <%= @tweets.length %> tweets with "<%= @search_term %>"</div>
     <div class="row">
       <div class="col-6 col-sm-6 col-lg-6">
         <% @tweets.each do |t| %>
