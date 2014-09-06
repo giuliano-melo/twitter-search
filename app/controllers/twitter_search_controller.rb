@@ -6,7 +6,7 @@ class TwitterSearchController < ApplicationController
       config.consumer_key        = ENV['twitter_config_key']
       config.consumer_secret     = ENV['twitter_config_secret']
     end
-    params = { result_type: 'recent', show_user: true, rpp: 50 }
+    params = { result_type: 'recent', show_user: true, rpp: 20 }
     @tweets = client.search(search_term, params).select { |t| t.geo.present? }
   end
 end

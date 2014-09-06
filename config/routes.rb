@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  root :to => "twitter_search#index"
   get 'twitter_search/index'
 
   # The priority is based upon order of creation: first created -> highest priority.
