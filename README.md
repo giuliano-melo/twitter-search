@@ -9,7 +9,9 @@ Then get the generated **API Key** and **API Secret** and make then available in
 `ENV['twitter_config_key']` and `ENV['twitter_config_secret']`
 
 You can user your .rvmrc file to do this
-`export twitter_config_key=xxxxxxxxx`
-`export twitter_config_secret=xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx`
+
+`export twitter_config_key=xxxxxxxxx
+
+export twitter_config_secret=xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx`
 
 Now, start rails server and enjoy! :)
